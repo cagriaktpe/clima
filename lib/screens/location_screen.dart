@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
-import 'package:geolocator/geolocator.dart';
 
 class LocationScreen extends StatefulWidget {
   @override
@@ -8,6 +7,7 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
