@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kApiKey = ''; // Add your API key here
+const kApiKey = ''; // Your API Key from https://openweathermap.org/
 
 const kTempTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
