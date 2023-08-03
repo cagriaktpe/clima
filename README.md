@@ -10,12 +10,12 @@
 
 Clima is a user-friendly weather app developed using Flutter. The app provides real-time weather information based on the user's current location or the city name they enter. Additionally, it offers personalized recommendations based on the weather conditions, such as suggesting attire or activities for the day.
 
-## Used Technologies
+## Technologies Used 
 
 - `Flutter`
 - `Dart`
 
-## Used Packages
+## Packages Used 
 
 - `geolocator`: Used to determine the user's current location.
 - `http`: Utilized for API communication to fetch weather data.
