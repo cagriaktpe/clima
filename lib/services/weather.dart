@@ -4,6 +4,7 @@ import 'package:clima/utilities/constants.dart';
 
 class WeatherModel {
 
+  // Get weather data based on current location
   Future<dynamic> getLocationWeather() async {
     Location location = Location();
     await location.getCurrentLocation();
@@ -13,10 +14,18 @@ class WeatherModel {
 
     var weatherData = await networkHelper.getData();
 
-
     return weatherData;
   }
 
+  // Get weather data based on city name
+  Future<dynamic> getCityWeather(String cityName) async {
+    NetworkHelper networkHelper = NetworkHelper(
+        '$kOpenWeatherMapURL?q=$cityName&appid=$kApiKey&units=metric');
+
+    return await networkHelper.getData();
+  }
+
+  // Get weather icon based on weather condition
   String getWeatherIcon(int condition) {
     if (condition < 300) {
       return '🌩';
@@ -37,6 +46,7 @@ class WeatherModel {
     }
   }
 
+  // Get weather message based on temperature
   String getMessage(int temperature) {
     if (temperature > 25) {
       return 'It\'s 🍦 time';
@@ -48,5 +58,4 @@ class WeatherModel {
       return 'Bring a 🧥 just in case';
     }
   }
-
 }
